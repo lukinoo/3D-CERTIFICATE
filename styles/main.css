@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap");
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .card {
+  width: 400px;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
+.container .card .card-content {
+  min-height: 70vh;
+  position: relative;
+  padding: 1rem 2rem;
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: -webkit-transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container .card .card-content .card-front,
+.container .card .card-content .card-back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  border-radius: 6px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: -webkit-gradient(linear, left top, right top, from(#43e97b), to(#38f9d7));
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+.container .card .card-content .card-front .card-front-title,
+.container .card .card-content .card-back .card-front-title {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container .card .card-content .card-front .card-front-title .card-title,
+.container .card .card-content .card-back .card-front-title .card-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  -webkit-transform: translateZ(5rem);
+          transform: translateZ(5rem);
+}
+
+.container .card .card-content .card-front .boxes,
+.container .card .card-content .card-back .boxes {
+  min-height: 25vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(60px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  -ms-grid-rows: (minmax(60px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+}
+
+.container .card .card-content .card-front .boxes div,
+.container .card .card-content .card-back .boxes div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+}
+
+.container .card .card-content .card-front .certificate-info,
+.container .card .card-content .card-back .certificate-info {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  -webkit-transform: translate(-20%, -20%);
+          transform: translate(-20%, -20%);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container .card .card-content .card-front .certificate-info h1,
+.container .card .card-content .card-front .certificate-info p,
+.container .card .card-content .card-back .certificate-info h1,
+.container .card .card-content .card-back .certificate-info p {
+  -webkit-transform: translateZ(5rem);
+          transform: translateZ(5rem);
+  letter-spacing: 2px;
+}
+
+.container .card .card-content .card-front .certificate-info p,
+.container .card .card-content .card-back .certificate-info p {
+  padding: 1.5rem 0;
+}
+
+.container .card .card-content .card-front .date,
+.container .card .card-content .card-back .date {
+  -webkit-transform: translateZ(5rem);
+          transform: translateZ(5rem);
+}
+
+.container .card .card-content .card-front {
+  font-family: "BPG Nino Mtavruli", sans-serif;
+}
+
+.container .card .card-content .card-back {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  background: #330867;
+  color: #43e97b;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .card .card-content .card-back .card-text {
+  -webkit-transform: translateZ(5rem);
+          transform: translateZ(5rem);
+}
+
+.container .card:hover .card-content {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+}
+/*# sourceMappingURL=main.css.map */
